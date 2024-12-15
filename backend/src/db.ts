@@ -23,6 +23,7 @@ const ContentSchema = new mongoose.Schema({
     required:true
    },
    title:String,
+   link:String,
    description:String,
    date:String,
    time:String,

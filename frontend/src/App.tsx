@@ -1,7 +1,13 @@
+import { Dashboard } from "./Dashboard"
+import { RecoilRoot } from "recoil";
 function App() {
 
   return (
-    <div className="bg-blue-400">frontend</div>
+    <>
+      <RecoilRoot>
+        <Dashboard/>
+      </RecoilRoot>
+    </>
   )
 }
 

@@ -6,7 +6,7 @@ import { Sidebar } from "../compnents/ui/Sidebar";
 import { useContent } from "../hook/useContent";
 import { PlusIcon } from "../icons/PlusIcon";
 import { ShareIcon } from "../icons/ShareIcon";
-import { useRecoilValue,useSetRecoilState,useResetRecoilState } from "recoil";
+import { useRecoilValue,useSetRecoilState } from "recoil";
 
 
 export function Dashboard(){

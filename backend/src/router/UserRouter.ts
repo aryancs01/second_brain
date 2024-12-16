@@ -7,10 +7,12 @@ import { jwtUtil } from '../utils/jwtUtil';
 import { middlewareUtil } from '../utils/middlewareUtil';
 import { linkHashUtil } from '../utils/linkHashUtil';
 import mongoose from 'mongoose';
+import cors from "cors";
 
 const UserRouter = express.Router();
 
 UserRouter.use(express.json())
+UserRouter.use(cors())
 
 UserRouter.post("/signup",async (req,res)=>{
     const requiredBody = z.object({

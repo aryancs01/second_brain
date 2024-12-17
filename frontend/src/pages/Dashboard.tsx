@@ -11,13 +11,13 @@ import { useRecoilValue,useSetRecoilState } from "recoil";
 
 export function Dashboard(){
     const setState = useSetRecoilState(modal);
-    const content = useContent();
+    const {content} = useContent();
 
     function displayContentModal(){
         setState(true)
     }
 
-    return <div>
+    return <div >
 
         <div>
            {useRecoilValue(modal) && <DisplayContentModal/>}

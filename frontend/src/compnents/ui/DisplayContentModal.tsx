@@ -5,6 +5,7 @@ import {useSetRecoilState,useRecoilValue } from "recoil";
 import { Input } from "./Input";
 import { useRef } from "react";
 import axios from "axios";
+import { useContent } from "../../hook/useContent";
 
 
 export function DisplayContentModal(){
@@ -14,6 +15,7 @@ export function DisplayContentModal(){
     const titleRef = useRef<HTMLInputElement>();
     const decscriptionRef = useRef<HTMLInputElement>();
     const type1 = useRecoilValue(buttonType)
+    const {refresh} = useContent();
 
     function closeModal(){
        setClose(false)
@@ -36,7 +38,8 @@ export function DisplayContentModal(){
             }
         })
 
-
+        closeModal();
+        refresh()
     }
 
     return <div >

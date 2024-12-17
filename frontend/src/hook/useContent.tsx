@@ -16,7 +16,7 @@ export function useContent(){
 
     useEffect(()=>{
         refresh();
-    },[])
+    },[content])
 
-    return content;
+    return {content,refresh};
 }
